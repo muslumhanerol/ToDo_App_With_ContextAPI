@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const TodoWrapper = ({ task }) => {
+const TodoWrapper = ({ tasks }) => {
     return (
         <>
             Hello
