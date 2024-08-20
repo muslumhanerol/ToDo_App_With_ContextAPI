@@ -1,13 +1,20 @@
 //Context yani kapsam burada oluşturulacak. Burada tanımlananların hepsi bunun içindeki heryerde geçerlidir, ayrıca göndermeye gerek kalmayacak.
 
-import React from 'react';
+import React, { useState } from 'react';
+import { TodoContext } from '../Contexts/TodoContext';
+import TodoAddForm from './TodoAddForm';
+import TodoContainer from './TodoContainer';
 
 const TodoWrapper = ({ tasks }) => {
+    const [taskList, setTaskList] = useState(tasks)
+
+
     return (
-        <>
-            Hello
-        </>
+        <TodoContext.Provider value={{ taskList, setTaskList }} >
+            <TodoAddForm />
+            <TodoContainer />
+        </TodoContext.Provider>
     )
-}//2.32.09
+}
 
 export default TodoWrapper
