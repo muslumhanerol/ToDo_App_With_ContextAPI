@@ -7,6 +7,7 @@ import TodoContainer from './TodoContainer';
 
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks)
+    console.log(taskList);
 
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
