@@ -1,7 +1,6 @@
 import './App.css';
 import TodoWrapper from './Components/TodoWrapper';
-import { useId } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const INITIAL_STATE = [ //Proğramın başlandıcında atadığımız varsayılan değer.
