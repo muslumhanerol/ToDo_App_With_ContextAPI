@@ -3,7 +3,6 @@ import TodoWrapper from './Components/TodoWrapper';
 import { useId } from 'react';
 
 
-
 function App() {
   const INITIAL_STATE = [ //Proğramın başlandıcında atadığımız varsayılan değer.
     { id: useId(), desc: "Toplantı notlarını unutma", completed: false, isEditing: false },
