@@ -1,7 +1,8 @@
 import React from 'react'
 
 const TodoAddForm = () => {
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
     }
     return (
