@@ -6,7 +6,7 @@ import TodoAddForm from './TodoAddForm';
 import TodoContainer from './TodoContainer';
 
 const TodoWrapper = ({ tasks }) => {
-    const [taskList, setTaskList] = useState(tasks)
+    const [taskList, setTaskList] = useState(tasks);
 
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
@@ -19,4 +19,4 @@ const TodoWrapper = ({ tasks }) => {
     )
 }
 
-export default TodoWrapper
+export default TodoWrapper;
