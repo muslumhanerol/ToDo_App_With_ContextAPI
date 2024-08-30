@@ -10,10 +10,13 @@ const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
 
     const addTask = _desc => { //Girilen görev bilgisi tutulacak.
+
         setTaskList(
             [...taskList, {
                 id: idGenerate(),
                 desc: _desc,
+                isCompleted: false,
+                isEditing: false
 
             }]
         );
