@@ -22,6 +22,14 @@ const TodoWrapper = ({ tasks }) => {
         );
     }
 
+    const toggleComplete = id => {
+        setTaskList(
+            taskList.map(task => task.id === id)
+
+
+        );
+    }
+
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
         //Göndermek istediklerimizi value içine yazılır. Ardından kullanmak isteiğimiz componentde import işlemi yapılır.
