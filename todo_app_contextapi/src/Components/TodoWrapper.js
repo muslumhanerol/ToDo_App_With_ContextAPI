@@ -9,10 +9,12 @@ import { v4 as idGenerate } from 'uuid';
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
 
-    const addTask = desc => { //Girilen görev bilgisi tutulacak.
+    const addTask = _desc => { //Girilen görev bilgisi tutulacak.
         setTaskList(
             [...taskList, {
-                id: idGenerate();
+                id: idGenerate(),
+                desc: _desc,
+
             }]
         );
     }
