@@ -4,12 +4,17 @@ import React, { useState } from 'react';
 import { TodoContext } from '../Contexts/TodoContext';
 import TodoAddForm from './TodoAddForm';
 import TodoContainer from './TodoContainer';
+import { v4 as idGenerate } from 'uuid';
 
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
 
-    const addTask = () => { //Girilen görev bilgisi tutulacak.
-
+    const addTask = desc => { //Girilen görev bilgisi tutulacak.
+        setTaskList(
+            [...taskList, {
+                id: idGenerate();
+            }]
+        );
     }
 
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
