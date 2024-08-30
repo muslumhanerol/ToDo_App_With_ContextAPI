@@ -24,7 +24,8 @@ const TodoWrapper = ({ tasks }) => {
 
     const toggleComplete = id => {
         setTaskList(
-            taskList.map(task => task.id === id)
+            taskList.map(task => task.id === id ? { ...task, isCompleted: !task.isCompleted } : task)
+            //...task=task içindeki herşeyi ekle, sadece isCompleted değiş.
 
 
         );
