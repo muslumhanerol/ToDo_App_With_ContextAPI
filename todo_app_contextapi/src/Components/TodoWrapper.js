@@ -8,6 +8,10 @@ import TodoContainer from './TodoContainer';
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
 
+    const addTask = () => { //Girilen görev bilgisi tutulacak.
+
+    }
+
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
         //Göndermek istediklerimizi value içine yazılır. Ardından kullanmak isteiğimiz componentde import işlemi yapılır.
