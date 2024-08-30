@@ -22,11 +22,21 @@ const TodoWrapper = ({ tasks }) => {
         );
     }
 
-    const toggleComplete = id => {
+    const toggleComplete = id => { //Görev durumunu değiştirme.
         setTaskList(
             taskList.map(task => task.id === id ? { ...task, isCompleted: !task.isCompleted } : task)
             //...task=task içindeki herşeyi ekle, sadece isCompleted değiş.
+        );
+    }
 
+    const deleteTask = id => { //Görev silme.
+        setTaskList(
+            taskList.filter(task => task.id != id)
+        );
+    }
+
+    const editTask = id => {
+        setTaskList(
 
         );
     }
