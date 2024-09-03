@@ -42,7 +42,7 @@ const TodoWrapper = ({ tasks }) => {
     }
 
     const updateTask = (id, _desc) => {
-        setTaskList(
+        setTaskList(//Herbir task için şu task.id eşit mi id ye kontrolünü yap. ?Eğer eşitse normal tüm özellikleri koy, dışarıdan gelen desc koy. isEditing daha öncekinin tam tersi !eğer öyle değilse taski aynen koy.
             taskList.map(task => task.id === id ? { ...task, desc: _desc, isEditing: !task.isEditing } : task)
         );
     }
