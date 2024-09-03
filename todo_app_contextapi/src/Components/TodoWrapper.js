@@ -42,7 +42,9 @@ const TodoWrapper = ({ tasks }) => {
     }
 
     const updateTask = (id, _desc) => {
-
+        setTaskList(
+            taskList.map(task => task.id === id ? { ...task, desc: _desc, isEditing: !task.isEditing } : task)
+        );
     }
 
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
