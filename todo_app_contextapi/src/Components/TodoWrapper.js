@@ -41,6 +41,10 @@ const TodoWrapper = ({ tasks }) => {
         );
     }
 
+    const updateTask = (id, _desc) => {
+
+    }
+
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
         //Göndermek istediklerimizi value içine yazılır. Ardından kullanmak isteiğimiz componentde import işlemi yapılır.
