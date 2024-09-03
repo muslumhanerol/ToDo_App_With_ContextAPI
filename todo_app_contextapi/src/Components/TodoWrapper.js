@@ -50,8 +50,8 @@ const TodoWrapper = ({ tasks }) => {
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
         //Göndermek istediklerimizi value içine yazılır. Ardından kullanmak isteiğimiz componentde import işlemi yapılır.
-
-        <TodoContext.Provider value={{ taskList, setTaskList }} >
+        //Merkezi bir yere koyduk diğer bütün companentler lazım oldukça çağırıp kullanabilecek.
+        <TodoContext.Provider value={{ taskList, setTaskList, addTask, toggleComplete, deleteTask, toggleEditing, updateTask }} >
             <TodoAddForm />
             <TodoContainer />
         </TodoContext.Provider>
