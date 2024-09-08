@@ -51,7 +51,7 @@ const TodoWrapper = ({ tasks }) => {
     return (
         //Göndermek istediklerimizi value içine yazılır. Ardından kullanmak isteiğimiz componentde import işlemi yapılır.
         //Merkezi bir yere koyduk diğer bütün companentler lazım oldukça çağırıp kullanabilecek.
-        //Diğer comp. lerden import etmemiz gerek. TodoAddForm.js 2. gibi.
+        //Diğer comp. lerden import etmemiz gerek. TodoAddForm.js 2. ve 6.satır.
         <TodoContext.Provider value={{ taskList, setTaskList, addTask, toggleComplete, deleteTask, toggleEditing, updateTask }} >
             <TodoAddForm />
             <TodoContainer />
