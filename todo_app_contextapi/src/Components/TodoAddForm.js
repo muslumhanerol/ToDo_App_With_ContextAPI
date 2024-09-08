@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { TodoContext } from '../Contexts/TodoContext';
 
 
 const TodoAddForm = () => {
-    const Context = useContext(TodoContext);
+    const context = useContext(TodoContext);
+    const [desc, setDesk] = useState(""); //Başlangıç değeri boş çünkü yeni görev girilen yer.
     const handleSubmit = (e) => {
         e.preventDefault();
+        context.addTask
+
     }
     return (
 
@@ -14,7 +17,7 @@ const TodoAddForm = () => {
             {/* form butonuna tıklandığında handleSubmit fonks. çalıştır. */}
             <form onSubmit={handleSubmit}>
                 <div className="input-group mb-3">
-                    <input type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                    <input onChange={(e) => { setDesk(e.target.value) }} type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
                     <button className="btn btn-outline-success" type="submit" id="btn-add-task">Task Ekle</button>
                 </div>
             </form>
