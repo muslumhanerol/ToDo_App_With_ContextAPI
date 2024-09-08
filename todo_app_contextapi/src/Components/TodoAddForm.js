@@ -7,9 +7,13 @@ const TodoAddForm = () => {
     const [desc, setDesk] = useState(""); //Başlangıç değeri boş çünkü yeni görev girilen yer.
     const handleSubmit = (e) => {
         e.preventDefault();
-        context.addTask(desc);
-        setDesk(""); //içi temizleme
-        e.target.firstChild.firstChild.focus();
+        if (desc) {
+            context.addTask(desc);
+            setDesk(""); //içi temizleme
+            e.target.firstChild.firstChild.focus();
+        } else {
+            alert("Lütfen Boş bırakmayını<");
+        }
 
     }
     return (
