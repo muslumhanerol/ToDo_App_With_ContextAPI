@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TodoContext } from '../Contexts/TodoContext';
 
 
 const TodoAddForm = () => {
+    const Context = useContext(TodoContext);
     const handleSubmit = (e) => {
         e.preventDefault();
-
     }
     return (
 
