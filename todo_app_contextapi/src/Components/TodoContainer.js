@@ -11,7 +11,6 @@ const TodoContainer = () => {
                 <Todo />
                 <Todo />
                 <Todo />
-
             </ul>
         </>
     )
