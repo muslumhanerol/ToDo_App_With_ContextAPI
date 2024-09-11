@@ -17,7 +17,6 @@ const TodoWrapper = ({ tasks }) => {
                 desc: _desc,
                 isCompleted: false,
                 isEditing: false
-
             }]
         );
         console.log(taskList);
