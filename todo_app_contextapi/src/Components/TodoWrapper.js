@@ -20,6 +20,7 @@ const TodoWrapper = ({ tasks }) => {
 
             }]
         );
+        console.log(taskList);
     }
 
     const toggleComplete = id => { //Görev durumunu değiştirme.
