@@ -12,7 +12,7 @@ const TodoAddForm = () => {
             setDesk(""); //içi temizleme
             e.target.firstChild.firstChild.focus();
         } else {
-            alert("Lütfen Boş bırakmayını<");
+            alert("Lütfen Boş bırakmayını.");
         }
 
     }
