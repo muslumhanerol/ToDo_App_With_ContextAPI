@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { TodoContext } from '../Contexts/TodoContext';
 
-
 const TodoAddForm = () => {
     const context = useContext(TodoContext);
     const [desc, setDesk] = useState(""); //Başlangıç değeri boş çünkü yeni görev girilen yer.
@@ -14,7 +13,6 @@ const TodoAddForm = () => {
         } else {
             alert("Lütfen Boş bırakmayınız.");
         }
-
     }
     return (
 
