@@ -53,8 +53,10 @@ const TodoWrapper = ({ tasks }) => {
         //Merkezi bir yere koyduk diğer bütün companentler lazım oldukça çağırıp kullanabilecek.
         //Diğer comp. lerden import etmemiz gerek. TodoAddForm.js 2. ve 6.satır.
         <TodoContext.Provider value={{ taskList, setTaskList, addTask, toggleComplete, deleteTask, toggleEditing, updateTask }} >
-            <TodoAddForm />
-            <TodoContainer />
+            <div className='container w-50 p-5'>
+                <TodoAddForm />
+                <TodoContainer />
+            </div>
         </TodoContext.Provider>
     )
 }

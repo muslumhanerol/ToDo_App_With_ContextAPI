@@ -16,7 +16,7 @@ const TodoAddForm = () => {
     }
     return (
 
-        <div className='container w-50 p-5'>
+        <div className='container-fluid g-0'>
             <h1 className='display-5 text-center mb-5 text-primary'>Todo App</h1>
             {/* form butonuna tıklandığında handleSubmit fonks. çalıştır. */}
             <form onSubmit={handleSubmit}>
