@@ -7,7 +7,7 @@ const INITIAL_STATE = [ //Proğramın başlandıcında atadığımız varsayıla
   { id: idGenerate(), desc: "Müşterileri aramayı unutma", isCompleted: false, isEditing: false },
   { id: idGenerate(), desc: "Spor salonundan randevu iptali", isCompleted: true, isEditing: false },
   { id: idGenerate(), desc: "Proje yönetimi görüşmesi", isCompleted: false, isEditing: false },
-  { id: idGenerate(), desc: "Javascript konferansını unutma", isCompleted: false, isEditing: false }
+  { id: idGenerate(), desc: "Javascript konferansını unutma", isCompleted: true, isEditing: false }
 ];
 
 function App() {
