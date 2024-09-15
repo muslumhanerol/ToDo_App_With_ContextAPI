@@ -7,10 +7,9 @@ const TodoContainer = () => {
     return (
         <>
             <ul className='list-group'>
-                <Todo />
-                <Todo />
-                <Todo />
-                <Todo />
+                {
+                    context.taskList.map(task => <Todo task={task} />)
+                }
             </ul>
         </>
     )
