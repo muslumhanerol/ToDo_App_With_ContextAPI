@@ -3,7 +3,7 @@ import React from 'react'
 const Todo = ({ task }) => {
     return (
         <div>
-            <li className={task.isCompleted ? "list-group-item rounded-2 mb-1 text-decoration-line-through disabled" : "list-group-item rounded-2 mb-1"}>
+            <li className={task.isCompleted ? "d-flex justify-content-between list-group-item rounded-2 mb-1 text-decoration-line-through disabled" : "d-flex justify-content-between list-group-item rounded-2 mb-1"}>
                 <div>
                     {task.desc}
                 </div>
