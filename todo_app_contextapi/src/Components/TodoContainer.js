@@ -8,7 +8,7 @@ const TodoContainer = () => {
         <>
             <ul className='list-group'>
                 {
-                    context.taskList.map(task => <Todo task={task} />)
+                    context.taskList.map(task => <Todo key={task.id} task={task} />)
                 }
             </ul>
         </>
