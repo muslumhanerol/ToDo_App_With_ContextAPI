@@ -5,7 +5,7 @@ const Todo = ({ task }) => {
     const context = useContext(TodoContext);
     return (
         <div>
-            <li className={task.isCompleted ? "d-flex justify-content-between list-group-item rounded-2 mb-1 text-decoration-line-through disabled" : "d-flex justify-content-between list-group-item rounded-2 mb-1"}>
+            <li className={task.isCompleted ? "d-flex justify-content-between list-group-item rounded-2 mb-1 text-decoration-line-through" : "d-flex justify-content-between list-group-item rounded-2 mb-1"}>
                 <div>
                     {task.desc}
                 </div>
