@@ -8,7 +8,7 @@ const Todo = ({ task }) => {
                     {task.desc}
                 </div>
                 <div>
-                    <button className='btn btn-warning btn-sm'>Düzenle</button>
+                    <button className='btn btn-warning btn-sm me-1'>Düzenle</button>
                     <button className='btn btn-danger btn-sm'>Sil</button>
                 </div>
 
