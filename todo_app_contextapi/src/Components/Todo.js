@@ -5,8 +5,8 @@ const Todo = ({ task }) => {
     const context = useContext(TodoContext);
     return (
         <div>
-            <li className={task.isCompleted ? "d-flex justify-content-between list-group-item rounded-2 mb-1 text-decoration-line-through" : "d-flex justify-content-between list-group-item rounded-2 mb-1"}>
-                <div onClick={() => { context.toggleComplete(task.id) }} className='w-75'>
+            <li className={task.isCompleted ? "d-flex justify-content-between list-group-item rounded-2 mb-1 text-decoration-line-through text-success" : "d-flex justify-content-between list-group-item rounded-2 mb-1"}>
+                <div role="button" onClick={() => { context.toggleComplete(task.id) }} className='w-75'>
                     {task.desc}
                 </div>
                 <div>
