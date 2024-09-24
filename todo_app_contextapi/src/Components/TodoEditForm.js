@@ -17,17 +17,13 @@ const TodoEditForm = ({ task }) => {
     }
     return (
 
-        <div className='container-fluid g-0'>
-            <h1 className='display-5 text-center mb-5 text-primary'>Todo App</h1>
-            <form onSubmit={handleSubmit}>
-                <div className="input-group mb-3">
-                    <input onChange={(e) => { setDesk(e.target.value) }} value={desc} type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                    <button className="btn btn-outline-success" type="submit" id="btn-add-task">Task Ekle</button>
-                </div>
-            </form>
-        </div>
-
+        <form onSubmit={handleSubmit}>
+            <div className="input-group mb-3">
+                <input onChange={(e) => { setDesk(e.target.value) }} value={desc} type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                <button className="btn btn-outline-warning" type="submit" id="btn-add-task">Task Güncelle</button>
+            </div>
+        </form>
     )
 }
 
-export default TodoAddForm
+export default TodoEditForm
