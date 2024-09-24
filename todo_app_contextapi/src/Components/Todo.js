@@ -13,8 +13,6 @@ const Todo = ({ task }) => {
                     <button className='btn btn-warning btn-sm me-1'>Düzenle</button>
                     <button className='btn btn-danger btn-sm' onClick={() => { context.deleteTask(task.id) }}>Sil</button>
                 </div>
-
-
             </li>
         </div >
     )
