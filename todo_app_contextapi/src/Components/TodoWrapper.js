@@ -37,7 +37,7 @@ const TodoWrapper = ({ tasks }) => {
 
     const toggleEditing = id => {
         setTaskList(
-            taskList.map(task => task.id === id ? { ...task, isEditing: !task.isEditing } : task)
+            taskList.map(task => task.id === id ? { ...task, isEditing: true } : { ...task, isEditing: false })
         );
     }
 
