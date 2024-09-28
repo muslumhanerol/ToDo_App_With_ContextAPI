@@ -8,9 +8,8 @@ const TodoEditForm = ({ task }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (desc) {
-            context.addTask(desc);
-            setDesk(""); //içi temizleme
-            e.target.firstChild.firstChild.focus();
+            context.updateTask(task.id, desc);
+
         } else {
             alert("Lütfen Boş bırakmayınız.");
         }
