@@ -26,4 +26,4 @@ const TodoEditForm = ({ task }) => {
     )
 }
 
-export default TodoEditForm
+export default TodoEditForm;

@@ -9,8 +9,11 @@ const TodoContainer = () => {
             <ul className='list-group'>
                 {
                     context.taskList.map(task => {
-                        return <Todo key={task.id} task={task} />
-
+                        if (task.isEditing) {
+                            return <TodoEditForm key={task.id} task={task} />
+                        } else {
+                            return <Todo key={task.id} task={task} />
+                        }
                     })
                 }
             </ul>
@@ -19,4 +22,4 @@ const TodoContainer = () => {
 
 }
 
-export default TodoContainer
+export default TodoContainer;
