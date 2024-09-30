@@ -23,11 +23,10 @@ const TodoAddForm = () => {
                 <div className="input-group mb-3">
                     <input onChange={(e) => { setDesk(e.target.value) }} value={desc} type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
                     <button className="btn btn-outline-success" type="submit" id="btn-add-task">Task Ekle</button>
-                    <button className="btn btn-danger" type="button" id="btn-clear-all" onClick={() => { context.cleareAll() }}>Hepsini Sil</button>
+                    <button className="btn btn-danger" type="button" id="btn-clear-all" onClick={() => { context.clearAll() }}>Hepsini Sil</button>
                 </div>
             </form>
         </div>
-
     )
 }
 
