@@ -14,6 +14,8 @@ const TodoAddForm = () => {
             alert("Lütfen Boş bırakmayınız.");
         }
     }
+
+
     return (
 
         <div className='container-fluid g-0'>
@@ -25,8 +27,8 @@ const TodoAddForm = () => {
                     <button className="btn btn-outline-success" type="submit" id="btn-add-task">Task Ekle</button>
                     <button className="btn btn-danger" type="button" id="btn-clear-all" onClick={() => { context.clearAll() }}>Hepsini Sil</button>
                 </div>
-            </form>
-        </div>
+            </form >
+        </div >
     )
 }
 
