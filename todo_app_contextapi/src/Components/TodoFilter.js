@@ -2,7 +2,11 @@ import React from 'react'
 
 const TodoFilter = () => {
     return (
-        <div>TodoFilter</div>
+        <>
+            <div>
+                <button>pending</button>
+            </div>
+        </>
     )
 }
 
