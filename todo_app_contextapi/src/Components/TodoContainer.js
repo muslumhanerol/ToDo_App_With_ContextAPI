@@ -10,10 +10,26 @@ const TodoContainer = () => {
             <ul className='list-group'>
                 {
                     context.taskList.map(task => {
-                        if (task.isEditing) {
-                            return <TodoEditForm key={task.id} task={task} />
+                        // if (task.isEditing) {
+                        //     return <TodoEditForm key={task.id} task={task} />
+                        // } else {
+                        //     return <Todo key={task.id} task={task} />
+                        // }
+
+                        if (context.filterMode == "all") {
+                            if (task.isEditing) {
+                                return <TodoEditForm key={task.id} task={task} />
+                            } else {
+                                return <Todo key={task.id} task={task} />
+                            }
                         } else {
-                            return <Todo key={task.id} task={task} />
+                            if (task.isCompleted == context.filterMode) {
+                                if (task.isEditing) {
+                                    return <TodoEditForm key={task.id} task={task} />
+                                } else {
+                                    return <Todo key={task.id} task={task} />
+                                }
+                            }
                         }
                     })
                 }
