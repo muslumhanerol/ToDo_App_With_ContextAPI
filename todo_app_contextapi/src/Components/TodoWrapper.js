@@ -9,6 +9,7 @@ import TodoFilter from './TodoFilter';
 
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
+    const [filterMode, setFilterMode] = useState("all")//filtreleme yapmak 1.adım.
 
     const addTask = _desc => { //Girilen görev bilgisi tutulacak.
 
