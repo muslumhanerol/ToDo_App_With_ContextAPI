@@ -5,6 +5,7 @@ import { TodoContext } from '../Contexts/TodoContext';
 import TodoAddForm from './TodoAddForm';
 import TodoContainer from './TodoContainer';
 import { v4 as idGenerate } from 'uuid';
+import TodoFilter from './TodoFilter';
 
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
@@ -59,6 +60,7 @@ const TodoWrapper = ({ tasks }) => {
         <TodoContext.Provider value={{ taskList, setTaskList, addTask, toggleComplete, deleteTask, toggleEditing, updateTask, clearAll }} >
             <div className='container w-50 p-5'>
                 <TodoAddForm />
+                <TodoFilter />
                 <TodoContainer />
             </div>
         </TodoContext.Provider>
