@@ -10,7 +10,7 @@ import TodoFilter from './TodoFilter';
 const TodoWrapper = ({ tasks }) => {
     const [taskList, setTaskList] = useState(tasks);
     const [filterMode, setFilterMode] = useState("all")//filtreleme yapmak 1.adım.
-    //filtermode eğer all ise hepsini göster. filtermode true ise completed gösterilecek, false ise completed olmayanları göstericek.
+    //filtermode eğer all ise hepsini göster. filtermode true ise completed gösterilecek, false ise completed olmayanları göstericek./2.adı providere eklemek 62.satır.
 
     const addTask = _desc => { //Girilen görev bilgisi tutulacak.
 
