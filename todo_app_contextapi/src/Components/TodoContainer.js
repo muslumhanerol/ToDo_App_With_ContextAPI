@@ -23,7 +23,7 @@ const TodoContainer = () => {
                                 return <Todo key={task.id} task={task} />
                             }
                         } else {
-                            if (task.isCompleted == context.filterMode) {//ilgili taskin isCompletedı context içindeki filtermode eşitse yani all,true,false. İlk if koşulu all old. burada ya true yada false olacak.
+                            if (task.isCompleted == context.filterMode) {//ilgili taskin isCompletedı context içindeki filtermode eşitse yani all,true,false. İlk if koşulu all old. burada ya true yada false olanı gösterecek.
                                 if (task.isEditing) {
                                     return <TodoEditForm key={task.id} task={task} />
                                 } else {
