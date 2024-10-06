@@ -16,14 +16,14 @@ const TodoContainer = () => {
                         //     return <Todo key={task.id} task={task} />
                         // }
 
-                        if (context.filterMode == "all") {
+                        if (context.filterMode == "all") {//filtermode al ise normal çalışacak.
                             if (task.isEditing) {
                                 return <TodoEditForm key={task.id} task={task} />
                             } else {
                                 return <Todo key={task.id} task={task} />
                             }
                         } else {
-                            if (task.isCompleted == context.filterMode) {
+                            if (task.isCompleted == context.filterMode) {//ilgili taskin isCompletedı context içindeki filtermode eşitse yani all,true,false. İlk if koşulu all old. burada ya true yada false olacak.
                                 if (task.isEditing) {
                                     return <TodoEditForm key={task.id} task={task} />
                                 } else {
