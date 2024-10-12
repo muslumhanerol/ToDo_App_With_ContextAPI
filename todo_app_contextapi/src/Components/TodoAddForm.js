@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { TodoContext } from '../Contexts/TodoContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
 const TodoAddForm = () => {
     const context = useContext(TodoContext);
@@ -25,7 +26,8 @@ const TodoAddForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="input-group mb-3">
                     <input onChange={(e) => { setDesk(e.target.value) }} value={desc} type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                    <button className="btn btn-outline-success" type="submit" id="btn-add-task"><FontAwesomeIcon icon="fa-solid fa-circle-plus" /></button>
+                    <button className="btn btn-outline-success" type="submit" id="btn-add-task"><FontAwesomeIcon icon={faCirclePlus} />
+                    </button>
 
                 </div>
             </form >
