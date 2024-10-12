@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { TodoContext } from '../Contexts/TodoContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const Todo = ({ task }) => {
     const context = useContext(TodoContext);
@@ -12,9 +12,9 @@ const Todo = ({ task }) => {
                     {task.desc}
                 </div>
                 <div>
-                    <button className='btn btn-warning btn-sm me-1' onClick={() => { context.toggleEditimg(task.id) }}><FontAwesomeIcon icon={faPenToSquare} /></button>
+                    <button className='btn btn-warning me-1' onClick={() => { context.toggleEditimg(task.id) }}><FontAwesomeIcon icon={faPenToSquare} /></button>
 
-                    <button className='btn btn-danger btn-sm' onClick={() => { context.deleteTask(task.id) }}>Sil</button>
+                    <button className='btn btn-danger' onClick={() => { context.deleteTask(task.id) }}><FontAwesomeIcon icon={faTrashCan} /></button>
                 </div>
             </li>
         </div >
