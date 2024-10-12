@@ -27,7 +27,7 @@ const TodoAddForm = () => {
                 <div className="input-group mb-3">
                     <input onChange={(e) => { setDesk(e.target.value) }} value={desc} type="text" className="form-control" placeholder="Görev yaz" aria-label="Recipient's username" aria-describedby="button-addon2" />
                     <button className="btn btn-outline-success" type="submit" id="btn-add-task">
-                        {/* <FontAwesomeIcon icon={faCirclePlus} size='xl' /> */}
+                        {/* <FontAwesomeIcon icon={faCirclePlus} size='2xl' /> 1.yöntem */}
                         <FontAwesomeIcon icon={faCirclePlus} className='fs-1' />
                     </button>
 
