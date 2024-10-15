@@ -62,6 +62,14 @@ const TodoWrapper = ({ tasks }) => {
         localStorage.setItem("todo-app-react", JSON.stringify(taskList));
     }
 
+    const getLocalStorage = () => {
+        let item = localStorage.getItem("todo-app-react");
+        if (item != null) {
+            setTaskList(JSON.parse(item));
+        };
+    }
+
+
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
     return (
         //Göndermek istediklerimizi value içine yazılır. Ardından kullanmak isteiğimiz componentde import işlemi yapılır.
