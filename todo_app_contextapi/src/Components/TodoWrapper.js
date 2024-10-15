@@ -22,7 +22,7 @@ const TodoWrapper = ({ tasks }) => {
                 isEditing: false
             }]
         );
-        console.log(taskList);
+        setLocalStorage();
     }
 
     const toggleComplete = id => { //Görev durumunu değiştirme.
@@ -30,12 +30,14 @@ const TodoWrapper = ({ tasks }) => {
             taskList.map(task => task.id === id ? { ...task, isCompleted: !task.isCompleted } : task)
             //...task=task içindeki herşeyi ekle, sadece isCompleted değiş.
         );
+        setLocalStorage();
     }
 
     const deleteTask = id => { //Görev silme.
         setTaskList(
             taskList.filter(task => task.id != id)
         );
+        setLocalStorage();
     }
 
     const toggleEditing = id => {
@@ -55,7 +57,7 @@ const TodoWrapper = ({ tasks }) => {
     }
 
     const setLocalStorage = () => {
-
+        localStorage.setItem("todo-app-react", JSON.stringify(taskList));
     }
 
     //TodoContext içerisine yazılan herşeyde TodoContext de var olan propslar kullanılabilir olacak.
