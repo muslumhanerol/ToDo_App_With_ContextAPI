@@ -13,9 +13,10 @@ const TodoWrapper = ({ tasks }) => {
     //filtermode eğer all ise hepsini göster. filtermode true ise completed gösterilecek, false ise completed olmayanları göstericek./2.adı providere eklemek 62.satır.
 
     useEffect(() => {
-        getLocalStorage();
+        getLocalStorage(); //Her değişim meydana geldiğinde tekrandan localestorage okunacak.
     }, []);
-    useEffect(() => {
+
+    useEffect(() => { //Taskliste bağımlı çalışan useEffect. Tasklist değiştiğinde set edilecek.
         setLocalStorage
     }, [taskList]);
 
