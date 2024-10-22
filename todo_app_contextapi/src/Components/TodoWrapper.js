@@ -14,7 +14,7 @@ const TodoWrapper = ({ tasks }) => {
 
     useEffect(() => {
         getLocalStorage();
-    }, taskList);
+    }, []);
 
     const addTask = _desc => { //Girilen görev bilgisi tutulacak.
 
