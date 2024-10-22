@@ -15,6 +15,9 @@ const TodoWrapper = ({ tasks }) => {
     useEffect(() => {
         getLocalStorage();
     }, []);
+    useEffect(() => {
+        setLocalStorage
+    });
 
     const addTask = _desc => { //Girilen görev bilgisi tutulacak.
 
@@ -26,7 +29,6 @@ const TodoWrapper = ({ tasks }) => {
                 isEditing: false
             }]
         );
-        setLocalStorage();
     }
 
     const toggleComplete = id => { //Görev durumunu değiştirme.
@@ -34,14 +36,12 @@ const TodoWrapper = ({ tasks }) => {
             taskList.map(task => task.id === id ? { ...task, isCompleted: !task.isCompleted } : task)
             //...task=task içindeki herşeyi ekle, sadece isCompleted değiş.
         );
-        setLocalStorage();
     }
 
     const deleteTask = id => { //Görev silme.
         setTaskList(
             taskList.filter(task => task.id != id)
         );
-        setLocalStorage();
     }
 
     const toggleEditing = id => {
@@ -54,7 +54,6 @@ const TodoWrapper = ({ tasks }) => {
         setTaskList(//Herbir task için şu task.id eşit mi id ye kontrolünü yap. ?Eğer eşitse normal tüm özellikleri koy, dışarıdan gelen desc koy. isEditing daha öncekinin tam tersi !eğer öyle değilse taski aynen koy.
             taskList.map(task => task.id === id ? { ...task, desc: _desc, isEditing: !task.isEditing } : task)
         );
-        setLocalStorage();
     }
 
     const clearAll = () => {
