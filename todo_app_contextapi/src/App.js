@@ -11,6 +11,7 @@ const INITIAL_STATE = [ //Proğramın başlandıcında atadığımız varsayıla
 ];
 
 function App() {
+  const tasks
 
   return (
     <>
