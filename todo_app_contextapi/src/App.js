@@ -12,18 +12,10 @@ const INITIAL_STATE = [ //Proğramın başlandıcında atadığımız varsayıla
 ];
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-  useEffect(() => {
-    let item = localStorage.getItem("todo-app-react");
-    if (item != null) {
-      setTasks(JSON.parse(item));
-    };
-    console.log(tasks);
-  }, [])
 
   return (
     <>
-      <TodoWrapper tasks={tasks} />
+      <TodoWrapper tasks={INITIAL_STATE} />
     </>
   );
 }
