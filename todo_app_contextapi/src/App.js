@@ -18,7 +18,7 @@ function App() {
     if (item != null) {
       setTasks(JSON.parse(item));
     };
-    console.log(item);
+    console.log(tasks);
   }, [])
 
   return (
