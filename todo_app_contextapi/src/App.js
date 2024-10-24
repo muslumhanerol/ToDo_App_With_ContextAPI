@@ -19,7 +19,7 @@ function App() {
       setTasks(JSON.parse(item));
     };
     console.log(item);
-  });
+  }, [])
 
   return (
     <>
