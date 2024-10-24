@@ -8,7 +8,10 @@ import { v4 as idGenerate } from 'uuid';
 import TodoFilter from './TodoFilter';
 
 const TodoWrapper = ({ tasks }) => {
-    const [taskList, setTaskList] = useState(tasks);
+    const [taskList, setTaskList] = useState(
+        localStorage.getItem("todo-app-react") != null ? JSON.parse(localStorage.getItem("todo-app-react")) : []
+        //localestorage den todo-app-react itemını okumaya çalış null değilse yani doluysa onu parse et ve tasklist e ata, eğer null sa dizi başlangıçta boş dizidir [] atandı.
+    );
     const [filterMode, setFilterMode] = useState("all")//filtreleme yapmak 1.adım.
     //filtermode eğer all ise hepsini göster. filtermode true ise completed gösterilecek, false ise completed olmayanları göstericek./2.adı providere eklemek 62.satır.
 
