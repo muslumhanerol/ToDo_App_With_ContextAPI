@@ -17,7 +17,7 @@ const TodoWrapper = ({ tasks }) => {
     }, []);
 
     useEffect(() => { //Taskliste bağımlı çalışan useEffect. Tasklist değiştiğinde set edilecek.
-        setLocalStorage
+        setLocalStorage();
     }, [taskList]);
 
     const addTask = _desc => { //Girilen görev bilgisi tutulacak.

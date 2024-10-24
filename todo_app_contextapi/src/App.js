@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <TodoWrapper tasks={INITIAL_STATE} />
+      <TodoWrapper tasks={tasks} />
     </>
   );
 }
