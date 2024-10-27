@@ -19,7 +19,7 @@ const TodoWrapper = ({ tasks }) => {
         getLocalStorage(); //Her değişim meydana geldiğinde tekrandan localestorage okunacak.
     }, []);
 
-    useEffect(() => { //Taskliste bağımlı çalışan useEffect. Tasklist değiştiğinde set edilecek.
+    useEffect(() => { //Taskliste bağımlı çalışan useEffect. Tasklist değiştiğinde setLocalStorage çalışacak.
         setLocalStorage();
     }, [taskList]);
 
